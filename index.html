@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="A Markdown Guide technical documentation page">
+  <meta name="author" content="Nix7amcm">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="Favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="Favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="Favicon/favicon-16x16.png">
+  <link rel="manifest" href="Favicon/site.webmanifest">
+  <link rel="mask-icon" href="Favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#00aba9">
+  <meta name="theme-color" content="#ffffff">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+  <title>Markdown Docs</title>
+
+
+</head>
+
+  <body class="bg-dark text-light">
+
+    <div class="container-fluid gx-0">
+
+      <div class="content-wrapper row gx-0">
+
+
+        <!--***** NAVBAR *****-->
+        <div
+          id="navbar-column"
+          class="col-md-3"
+        >
+
+          <nav
+            id="navbar"
+            class="flex-column"
+          >
+            <header class="h1 d-flex flex-row justify-content-center p-3 mb-0">
+              <a
+                href="/"
+                class="d-flex align-items-center mb-3 mb-md-0"
+              >
+                <i class="bi bi-filetype-md me-2"></i>
+                <span class="fs-4">
+                  Markdown Docs
+                </span>
+              </a>
+            </header>
+
+
+            <hr class="mt-0 mb-3">
+
+
+            <nav
+              id="main-nav"
+              class="nav nav-pills flex-column flex-nowrap"
+            >
+
+              <a
+                href="#Overview"
+                class="nav-link overview-nav-link"
+              >
+                <i class="bi bi-file-earmark-text me-2"></i>Overview
+              </a>
+
+
+              <a
+                href="#Syntax"
+                class="nav-link syntax-nav-link"
+              >
+                <i class="bi bi-file-earmark-code me-2"></i>Syntax:
+              </a>
+
+              <nav class="nav nav-pills flex-column syntax-nav-list border border-info border-opacity-25 border-top-0 border-end-0 border-bottom-0 ms-4">
+
+
+                <a
+                  href="#Headings"
+                  class="nav-link"
+                >
+                  <i class="bi bi-type-h1 me-2"></i>Headings
+                </a>
+
+
+                <a
+                  href="#Lists"
+                  class="nav-link"
+                >
+                  <i class="bi bi-list-ul me-2"></i>Lists
+                </a>
+
+
+                <a
+                  href="#Text_Styles"
+                  class="nav-link"
+                >
+                  <i class="bi bi-fonts me-2"></i>Text Styles
+                </a>
+
+
+                <a
+                  href="#Blockquotes"
+                  class="nav-link"
+                >
+                  <i class="bi bi-blockquote-left me-2"></i>Blockquotes
+                </a>
+
+
+                <a
+                  href="#Links"
+                  class="nav-link"
+                >
+                  <i class="bi bi-link-45deg me-2"></i>Links
+                </a>
+
+
+                <a
+                  href="#Images"
+                  class="nav-link"
+                >
+                  <i class="bi bi-images me-2"></i>Images
+                </a>
+
+
+                <a
+                  href="#Anchor_Links"
+                  class="nav-link"
+                >
+                  <i class="bi bi-link me-2"></i>Anchor Links
+                </a>
+
+
+                <a
+                  href="#Tables"
+                  class="nav-link"
+                >
+                  <i class="bi bi-table me-2"></i>Tables
+                </a>
+
+
+                <a
+                  href="#Task_Lists"
+                  class="nav-link"
+                >
+                  <i class="bi bi-check2-square me-2"></i>Task Lists
+                </a>
+
+
+                <a
+                  href="#Horizontal_Rules"
+                  class="nav-link"
+                >
+                  <i class="bi bi-hr me-2"></i>Horizontal Rules
+                </a>
+
+
+                <a
+                  href="#Code"
+                  class="nav-link"
+                >
+                  <i class="bi bi-code-slash me-2"></i>Code
+                </a>
+
+
+                <a
+                  href="#Escaping_Characters"
+                  class="nav-link"
+                >
+                  <i class="bi bi-ban me-2"></i>Escaping Characters
+                </a>
+
+
+                <a
+                  href="#Multi-line_Text"
+                  class="nav-link"
+                >
+                  <i class="bi bi-body-text me-2"></i>Multi-line Text
+                </a>
+
+
+                <a
+                  href="#Comments"
+                  class="nav-link"
+                >
+                  <i class="bi bi-chat me-2"></i>Comments
+                </a>
+
+
+                <a
+                  href="#Emojis"
+                  class="nav-link"
+                >
+                  <i class="bi bi-emoji-smile me-2"></i>Emojis
+                </a>
+
+              </nav>
+
+
+              <a
+                href="#Resources"
+                class="nav-link resources-nav-link"
+              >
+                <i class="bi bi-bookmark-star me-2"></i>Resources
+              </a>
+
+            </nav>
+
+            <hr>
+          </nav>
+
+        </div>
+
+
+        <!--***** MAIN DOC *****-->
+        <div
+          id="main-doc-column"
+          class="col-md-9 pt-4 m-auto px-4"
+        >
+          <main id="main-doc">
+
+
+            <!--_____ OVERVIEW SECTION _____-->
+            <section
+              id="Overview"
+              class="main-section mt-4 mb-5"
+            >
+
+              <header class="overview main-title display-6 mb-4">
+                <i class="bi bi-file-earmark-text"></i>
+                <span>Overview</span>
+              </header>
+
+              <div class="h5 mt-5 mb-3">Summary</div>
+              <p>
+                Markdown is a lightweight markup language with plain-text-formatting syntax. Its primary objective is to be as readable as possible. The design of Markdown is to make it easy to write using any basic text editor and equally simple to read in its raw form.
+              </p>
+
+              <div class="h5 mt-4 mb-3">Background</div>
+              <p>
+                John Gruber created Markdown in 2004 with the help of Aaron Swartz to write in an easy-to-read and easy-to-write format that can be converted to HTML. Since then, Markdown has become one of the most popular markup languages and is widely used for formatting readme files, writing messages in online discussion forums, and to create richly formatted text using a plain text editor.
+              </p>
+
+              <div class="h5 mt-4 mb-3">How it Works</div>
+              <p>
+                Markdown works by using simple and intuitive syntax that gets converted (or "rendered") into structurally valid HTML by a Markdown processor. This means you write in Markdown, and then it's transformed into the web pages that people see.
+              </p>
+
+              <div class="h5 mt-4 mb-3">Usage and Benefits</div>
+              <p>
+                Markdown is used for creating documents, notes, articles, emails and technical documentation. The benefits include its simplicity, ease of use, and its ability to be converted to HTML and many other formats. It is beneficial for quickly creating formatted text that can be easily converted into multiple formats. Its simplicity and compatibility make it an excellent choice for writing documentation or creating content for the web.
+              </p>
+
+              <div class="h5 mt-4 mb-3">Why Choose Markdown?</div>
+              <p>
+                Compared to rich text formatting, Markdown offers a more streamlined and distraction-free writing experience with its incredibly straightforward syntax. Additionally, the files are plain text, so they are small in size making it highly compatible with version control systems such as Git.
+              </p>
+
+              <div class="h5 mt-4 mb-3">Applications</div>
+              <p>
+                Markdown is commonly used in various professions, including software development, technical writing, content creation, and academic research. It has become an essential skill for anyone working with web content, documentation, or collaborative writing projects. It's used widely on websites like GitHub, Reddit, and Stack Overflow – anywhere that users are expected to submit their own content but may not know complex HTML or desire a simpler way to format.
+              </p>
+
+            </section>
+
+
+            <hr>
+            <hr>
+
+
+            <!--_____ SYNTAX SECTION _____-->
+            <section
+              id="Syntax"
+              class="main-section mt-5 mb-5"
+            >
+              <header class="syntax main-title display-6 my-4">
+                <i class="bi bi-file-earmark-code"></i>
+                <span>Syntax</span>
+              </header>
+
+
+              <!--##### HEADINGS #####-->
+              <section
+                id="Headings"
+                class="main-section my-5"
+              >
+
+                <header class="headings section-title h2 mt-4 mb-4">
+                  <i class="bi bi-type-h1 me-2"></i>
+                  Headings
+                </header>
+
+                <div class="summary">
+                  <p>
+                    Headings are used to denote section breaks in a document, and they range from level 1 to 6, with level 1 being the <i>most</i> significant (often the title of the document) and level 6 the <i>least</i> significant.
+                  </p>
+                  <p>
+                    Headings are created using a hash symbol <code>#</code> followed by a space. The number of hash symbols determines the level of the heading.
+                  </p>
+                </div>
+
+
+                <p class="example mt-4 mb-3">
+                  Example:
+                </p>
+
+                <div class="code-block markdown">
+                  <pre><code>
+# H1
+## H2
+### H3
+#### H4
+##### H5
+###### H6    
+  </code></pre>
+                </div>
+
+
+                <p class="converted mt-4 mb-3">
+                  Will be converted to:
+                </p>
+
+                <div class="code-block as-html">
+                  <pre><code>
+&lt;h1&gt;H1&lt;/h1&gt;
+&lt;h2&gt;H2&lt;/h2&gt;
+&lt;h3&gt;H3&lt;/h3&gt;
+&lt;h4&gt;H4&lt;/h4&gt;
+&lt;h5&gt;H5&lt;/h5&gt;
+&lt;h6&gt;H6&lt;/h6&gt;
+  </code></pre>
+                </div>
+
+
+                <p class="displayed mt-4 mb-3">
+                  And displayed as:
+                </p>
+
+                <div class="code-block result bg-info-subtle">
+                  <h1>H1</h1>
+                  <h2>H2</h2>
+                  <h3>H3</h3>
+                  <h4>H4</h4>
+                  <h5>H5</h5>
+                  <h6>H6</h6>
+                </div>
+
+              </section>
+
+
+              <hr>
+
+
+              <!--##### LISTS #####-->
+              <section
+                id="Lists"
+                class="main-section my-5"
+              >
+
+                <header class="lists section-title h2 my-4">
+                  <i class="bi bi-list-ul me-2"></i>
+                  Lists
+                </header>
+
+
+                <!------- UNORDERED LISTS ------->
+                <div class="lists-unordered sub-title h4 mt-4 mb-4">
+                  <u>Unordered Lists</u>
+                </div>
+
+                <div class="summary">
+                  <p>
+                    Unordered lists are used to present a list of items <i>without a specific order</i>. They are typically rendered with bullet points.
+                  </p>
+                  <p>
+                    Unordered lists are created using a dash <code>-</code> , plus <code>+</code> , or asterisk <code>*</code> followed by a space.
+                  </p>
+                </div>
+
+
+                <p class="example mt-4 mb-3">
+                  Example:
+                </p>
+
+                <div class="code-block markdown">
+                  <pre><code>
+- Item 1
+- Item 2
+  - Nested Item 2.1
+  - Nested Item 2.2
+    - Nested Item 2.2.1
+  </code></pre>
+                </div>
+
+
+                <p class="converted mt-4 mb-3">
+                  Will be converted to:
+                </p>
+
+                <div class="code-block as-html">
+                  <pre><code>
+&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2
+    &lt;ul&gt;
+      &lt;li&gt;Nested Item 2.1&lt;/li&gt;
+      &lt;li&gt;Nested Item 2.2
+        &lt;ul&gt;
+          &lt;li&gt;Nested Item 2.2.1&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+  </code></pre>
+                </div>
+
+
+                <p class="displayed mt-4 mb-3">
+                  And displayed as:
+                </p>
+
+                <div class="code-block result bg-info-subtle">
+                  <ul>
+                    <li>Item 1</li>
+                    <li>Item 2
+                      <ul>
+                        <li>Nested Item 2.1</li>
+                        <li>Nested Item 2.2
+                          <ul>
+                            <li>Nested Item 2.2.1</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+
+
+                <!------- ORDERED ------->
+                <div class="lists-ordered sub-title h4 mt-5 mb-4">
+                  <u>Ordered Lists</u>
+                </div>
+
+                <div class="summary">
+                  <p>
+                    Ordered lists are similar to unordered lists, but they are used to present a sequence of items <i>in</i> a specific order, numbered by default.
+                  </p>
+                  <p>
+                    Ordered lists are created using numbers followed by a period <code>.</code> and a space.
+                  </p>
+                </div>
+
+
+                <p class="example mt-4 mb-3">
+                  Example:
+                </p>
+
+                <div class="code-block markdown">
+                  <pre><code>
+1. First item
+2. Second item
+  1. Nested item 1
+  2. Nested item 2
+    1. Nested item 2a
+  </code></pre>
+                </div>
+
+
+                <p class="converted mt-4 mb-3">
+                  Will be converted to:
+                </p>
+
+                <div class="code-block as-html">
+                  <pre><code>
+&lt;ol&gt;
+  &lt;li&gt;First item&lt;/li&gt;
+  &lt;li&gt;Second item
+    &lt;ol&gt;
+      &lt;li&gt;Nested item 1&lt;/li&gt;
+      &lt;li&gt;Nested item 2
+        &lt;ol&gt;
+          &lt;li&gt;Nested item 2a&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+  </code></pre>
+                </div>
+
+
+                <p class="displayed mt-4 mb-3">
+                  And displayed as:
+                </p>
+
+                <div class="code-block result bg-info-subtle">
+                  <ol>
+                    <li>First item</li>
+                    <li>Second item
+                      <ol>
+                        <li>Nested item 1</li>
+                        <li>Nested item 2
+                          <ol>
+                            <li>Nested item 2a</li>
+                          </ol>
+                        </li>
+                      </ol>
+                    </li>
+                  </ol>
+                </div>
+
+              </section>
+
+
+              <hr>
+
+
+              <!--##### TEXT STYLES #####-->
+              <section
+                id="Text_Styles"
+                class="main-section my-5"
+              >
+
+                <header class="text-styles section-title h2 my-4">
+                  <i class="bi bi-list-ul me-2"></i>
+                  Text Styles
+                </header>
+
+
+                <!------- ITALICS ------->
+                <div class="text-styles-italics sub-title h4 mt-4 mb-4">
+                  <u>Italics</u>
+                </div>
+
+                <div class="summary">
+                  <p>
+                    Italics are used for <i>emphasis</i> or to denote a title of a work.
+                  </p>
+
+                  <p>
+                    There are two ways to create italics, using either an underscore <code>_</code> or an asterisk <code>*</code> .
+                  </p>
+                </div>
+
+
+                <p class="example mt-4 mb-3">
+                  Example:
+                </p>
+
+                <div class="code-block markdown">
+                  <pre><code>
+*italicized text*
+_italicized text_
+  </code></pre>
+                </div>
+
+
+                <p class="converted mt-4 mb-3">
+                  Will be converted to:
+                </p>
+
+                <div class="code-block as-html">
+                  <pre><code>
+&lt;em&gt;italicized text&lt;/em&gt;
+&lt;em&gt;italicized text&lt;/em&gt;
+  </code></pre>
+                </div>
+
+
+                <p class="displayed mt-4 mb-3">
+                  And displayed as:
+                </p>
+
+                <div class="code-block result bg-info-subtle">
+                  <em>italicized text</em><br>
+                  <em>italicized text</em>
+                </div>
+
+
+                <!------- BOLD ------->
+                <div class="text-styles-bold sub-title h4 mt-5 mb-4">
+                  <u>Bold</u>
+                </div>
+
+                <div class="summary">
+                  <p>
+                    Bold text is used for <b>strong</b> emphasis. Like italics, you can create bold text with either double asterisks <code>**</code> or double underscores <code>__</code> .
+                  </p>
+                </div>
+
+
+                <p class="example mt-4 mb-3">
+                  Example:
+                </p>
+
+                <div class="code-block markdown">
+                  <pre><code>
+**bold text**
+__bold text__
+  </code></pre>
+                </div>
+
+
+                <p class="converted mt-4 mb-3">
+                  Will be converted to:
+                </p>
+
+                <div class="code-block as-html">
+                  <pre><code>
+&lt;strong&gt;bold text&lt;/strong&gt;
+&lt;strong&gt;bold text&lt;/strong&gt;
+  </code></pre>
+                </div>
+
+
+                <p class="displayed mt-4 mb-3">
+                  And displayed as:
+                </p>
+
+                <div class="code-block result bg-info-subtle">
+                  <strong>bold text</strong><br>
+                  <strong>bold text</strong>
+                </div>
+
+
+                <!------- STRIKETHROUGH ------->
+                <div class="text-styles-strikethrough sub-title h4 mt-5 mb-4">
+                  <u>Strikethrough</u>
+                </div>
+
+                <div class="summary">
+                  <p>
+                    Strikethrough text is a way to represent text that is no longer accurate or relevant without removing it. It can be created using double tildes <code>~~</code> .
+                  </p>
+                </div>
+
+
+                <p class="example mt-4 mb-3">
+                  Example:
+                </p>
+
+                <div class="code-block markdown">
+                  <pre><code>
+~~strikethrough~~
+  </code></pre>
+                </div>
+
+
+                <p class="converted mt-4 mb-3">
+                  Will be converted to:
+                </p>
+
+                <div class="code-block as-html">
+                  <pre><code>
+&lt;del&gt;strikethrough&lt;/del&gt;
+  </code></pre>
+                </div>
+
+
+                <p class="displayed mt-4 mb-3">
+                  And displayed as:
+                </p>
+
+                <div class="code-block result bg-info-subtle">
+                  <del>strikethrough</del>
+                </div>
+
+
+                <!------- COMBINING TEXT STYLES ------->
+                <div class="text-styles-combining sub-title h4 mt-5 mb-4">
+                  <u>Combining Text Styles</u>
+                </div>
+
+                <div class="summary">
+                  <p>
+                    Markdown allows you to combine <b>bold</b>, <i>italic</i>, and <s>strikethrough</s> formatting for text as needed.
+                  </p>
+                  <p>
+                    You can combine them in any order, but it is best practice to place bold on the outside for readibility. You <i>cannot</i> combine two of the same formatting type.
+                  </p>
+                </div>
+
+
+                <p class="example mt-4 mb-3">
+                  Example:
+                </p>
+
+                <div class="code-block markdown">
+                  <pre><code>
+**_~~bold, italic, and strikethrough~~_**
+  </code></pre>
+                </div>
+
+
+                <p class="converted mt-4 mb-3">
+                  Will be converted to:
+                </p>
+
+                <div class="code-block as-html">
+                  <pre><code>
+&lt;strong&gt;&lt;em&gt;&lt;del&gt;bold, italic, and strikethrough&lt;/del&gt;&lt;/em&gt;&lt;/strong&gt;
+  </code></pre>
+                </div>
+
+
+                <p class="displayed mt-4 mb-3">
+                  And displayed as:
+                </p>
+
+                <div class="code-block result bg-info-subtle">
+                  <strong><em><del>bold, italic, and strikethrough</del></em></strong>
+                </div>
+
+              </section>
+
+
+              <hr>
+
+
+              <!--##### BLOCKQUOTES #####-->
+              <section
+                id="Blockquotes"
+                class="main-section my-5"
+              >
+
+                <header class="blockquotes section-title h2 my-4">
+                  <i class="bi bi-blockquote-left me-2"></i>
+                  Blockquotes
+                </header>
+
+
+                <!------- SINGLE BLOCKQUOTE ------->
+                <div class="summary">
+                  <p>
+                    Blockquotes are used to indicate that the enclosed text is, you guessed it, a quote! They are also sometimes used to display other snippets of content that are separate from the main document.
+                  </p>
+                  <p>
+                    Blockquotes are created using a greater than symbol <code>></code> followed by a space.
+                  </p>
+                </div>
+
+                <p class="example mt-4 mb-3">
+                  Example:
+                </p>
+
+                <div class="code-block markdown">
+                  <pre><code>
+> This is a blockquote.
+  </code></pre>
+                </div>
+
+
+                <p class="converted mt-4 mb-3">
+                  Will be converted to:
+                </p>
+
+                <div class="code-block as-html">
+                  <pre><code>
+&lt;blockquote&gt;
+  This is a blockquote.
+&lt;/blockquote&gt;
+  </code></pre>
+                </div>
+
+
+                <p class="displayed mt-4 mb-3">
+                  And displayed as:
+                </p>
+
+                <div class="code-block result bg-info-subtle">
+                  <blockquote class="mb-0">
+                    This is a blockquote.
+                  </blockquote>
+                </div>
+
+
+                <!------- MULTI-LEVEL BLOCKQUOTES ------->
+                <div class="lists-ordered sub-title h4 mt-5 mb-4">
+                  <u>Multi-level Blockquotes</u>
+                </div>
+
+                <div class="summary">
+                  <P>
+                    Blockquotes can be nested to create multi-level blockquotes. Nested blockquotes are created using multiple greater than symbols <code>></code> followed by a space.
+                  </P>
+                </div>
+
+
+                <p class="example mt-4 mb-3">
+                  Example:
+                </p>
+
+                <div class="code-block markdown">
+                  <pre><code>
+> This is the first level of quoting.
+>
+>> This is a nested blockquote.
+  </code></pre>
+                </div>
+
+
+                <p class="converted mt-4 mb-3">
+                  Will be converted to:
+                </p>
+
+                <div class="code-block as-html">
+                  <pre><code>
+&lt;blockquote&gt;
+  This is the first level of quoting.
+  &lt;blockquote&gt;
+    This is a nested blockquote.
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+  </code></pre>
+                </div>
+
+
+                <p class="displayed mt-4 mb-3">
+                  And displayed as:
+                </p>
+
+                <div class="code-block result bg-info-subtle">
+                  <blockquote class="mb-0">
+                    <p>This is the first level of quoting.</p>
+                    <blockquote class="mb-0">
+                      <p>This is a nested blockquote.</p>
+                    </blockquote>
+                  </blockquote>
+
+                </div>
+
+              </section>
+
+
+              <hr>
+
+
+              <!--##### LINKS #####-->
+              <section
+                id="Links"
+                class="main-section my-5"
+              >
+
+                <header class="links section-title h2 mt-4 mb-4">
+                  <i class="bi bi-link-45deg me-2"></i>
+                  Links
+                </header>
+
+                <div class="summary">
+                  <p>
+                    Links are created to enable navigation to other web pages, files, email addresses, locations, and more.
+                  </p>
+                  <p>
+                    They are created using square brackets <code>[ ]</code> followed by parentheses <code>( )</code> .
+                  </p>
+                  <p>
+                    The text inside the square brackets <code>[ ]</code> is used as the link's displayed text, and the text inside the parentheses <code>( )</code> is used as the link's URL or path.
+                  </p>
+                </div>
+
+
+                <p class="example mt-4 mb-3">
+                  Example:
+                </p>
+
+                <div class="code-block markdown">
+                  <pre><code>
+[FreeCodeCamp](https://www.freecodecamp.org/)    
+  </code></pre>
+                </div>
+
+
+                <p class="converted mt-4 mb-3">
+                  Will be converted to:
+                </p>
+
+                <div class="code-block as-html">
+                  <pre><code>
+&lt;a href="https://www.freecodecamp.org/"&gt;FreeCodeCamp&lt;/a&gt;
+  </code></pre>
+                </div>
+
+
+                <p class="displayed mt-4 mb-3">
+                  And displayed as:
+                </p>
+
+                <div class="code-block result bg-info-subtle">
+                  <a href="https://www.freecodecamp.org/">FreeCodeCamp</a>
+                </div>
+
+              </section>
+
+
+              <hr>
+
+
+              <!--##### IMAGES #####-->
+              <section
+                id="Images"
+                class="main-section my-5"
+              >
+
+                <header class="images section-title h2 mt-4 mb-4">
+                  <i class="bi bi-images me-2"></i>
+                  Images
+                </header>
+
+                <div class="summary">
+                  <p>
+                    Markdown supports embedding images and GIFs using a syntax similar to links.
+                  </p>
+                  <p>
+                    They are created using an exclamation mark <code>!</code> followed by square brackets <code>[ ]</code> and parentheses <code>( )</code> .
+                  </p>
+                  <p>
+                    The text inside the <i>square</i> brackets <code>[ ]</code> is used as the image's <code>alt</code> attribute. It's helpful to include a descriptive alt attribute for accessibility, as screenreaders can read it aloud to visually impaired users.
+                    It is also used by search engines to understand what the image is about.
+                  </p>
+                  <p>
+                    The text inside the <i>parentheses</i> <code>( )</code> is used as the image's source <code>src</code> attribute. The <code>src</code> attribute is used to specify the image's source and can be a URL or a path to a local file.
+                  </p>
+                  <p>
+                    Think 'SAPS' as a good way to remember this:
+                  </p>
+                  <p class="text-center">
+                    <u class="fs-5">S</u>quare
+                    <u class="fs-5">A</u>lt;
+                    <u class="fs-5">P</u>arentheses
+                    <u class="fs-5">S</u>ource.
+                  </p>
+                </div>
+
+
+                <p class="example mt-4 mb-3">
+                  Example:
+                </p>
+
+                <div class="code-block markdown">
+                  <pre><code>
+![Alt text](URL or /path/to/img.jpg)    
+  </code></pre>
+                </div>
+
+
+                <p class="converted mt-4 mb-3">
+                  Will be converted to:
+                </p>
+
+                <div class="code-block as-html">
+                  <pre><code>
+&lt;img src="URL or /path/to/img.jpg" alt="Alt text"&gt;
+  </code></pre>
+                </div>
+
+
+                <!------- LINKED IMAGES------->
+                <div class="images-linked sub-title h4 mt-4 mb-4">
+                  <u>Adding Links to Images</u>
+                </div>
+
+                <div class="summary">
+                  <p>
+                    You can also add links to images by combining the syntax for links and images.
+                  </p>
+                  <p>
+                    Simply replace the link's text inside the square brackets <code>[ ]</code> with the image syntax.
+                  </p>
+                  <p>
+                    The image will be clickable and will navigate the user to the URL or path specified in the link.
+                  </p>
+                </div>
+
+                <p class="example mt-4 mb-3">
+                  Example:
+                </p>
+
+                <div class="code-block markdown">
+                  <pre><code>
+[![Alt text](URL or /path/to/img.jpg)](URL)
+  </code></pre>
+                </div>
+
+                <p class="converted mt-4 mb-3">
+                  Will be converted to:
+                </p>
+
+                <div class="code-block as-html">
+                  <pre><code>
+&lt;a href="URL or /path/to/img.jpg"&gt;
+  &lt;img src="URL" alt="Alt text"&gt;
+&lt;/a&gt;
+  </code></pre>
+                </div>
+
+              </section>
+
+
+              <hr>
+
+
+              <!--##### ANCHOR LINKS #####-->
+              <section
+                id="Anchor_Links"
+                class="main-section my-5"
+              >
+
+                <header class="anchor-links section-title h2 mt-4 mb-4">
+                  <i class="bi bi-link me-2"></i>
+                  Anchor Links
+                </header>
+
+                <div class="summary">
+                  <p>
+                    Anchors allow for linking directly to a section <i>within</i> a document, and are not to be confused with links to <i>external</i> pages. They are also known as jump links, fragment identifiers, or hash links.
+                  </p>
+                  <p>
+                    Anchors are created using square brackets <code>[ ]</code> followed by parentheses <code>( )</code> .
+                  </p>
+                  <p>
+                    The text inside the square brackets <code>[ ]</code> is used as the anchor's displayed text, and the text inside the parentheses <code>( )</code> is used as the anchor's ID which is prefixed with a hash symbol <code>#</code> .
+                  </p>
+                  <p>
+                    The anchor's ID <i>must be unique</i> within the document. It is linked to the section of the document that has the same ID.
+                  </p>
+                  <p>
+                    Many Markdown renderers automatically create id attributes for headers based on their text content, which can then be used for anchor links.
+                  </p>
+                </div>
+
+
+                <p class="example mt-4 mb-3">
+                  Example:
+                </p>
+
+                <div class="code-block markdown">
+                  <pre><code>
+&lt;!-- Write the header: --&gt;
+## Section 1              
+
+&lt;!-- Create an anchor link pointing to that header: --&gt;
+[Go to Section 1](#section-1)
+  </code></pre>
+                </div>
+
+
+                <p class="converted mt-4 mb-3">
+                  Will be converted to:
+                </p>
+
+                <div class="code-block as-html">
+                  <pre><code>
+&lt;h2 id=&quot;section-1&quot;&gt;Section 1&lt;/h2&gt;
+
+&lt;a href="#section-1"&gt;Go to Section 1&lt;/a&gt;
+  </code></pre>
+                </div>
+
+
+                <p class="displayed mt-4 mb-3">
+                  And displayed as:
+                </p>
+
+                <div class="code-block result bg-info-subtle">
+                  <h2 id="section-1">Section 1</h2>
+                  <br>
+                  <a href="#section-1">Go to Section 1</a>
+                </div>
+
+              </section>
+
+
+              <hr>
+
+
+              <!--##### TABLES #####-->
+              <section
+                id="Tables"
+                class="main-section my-5"
+              >
+
+                <header class="tables section-title h2 mt-4 mb-4">
+                  <i class="bi bi-table me-2"></i>
+                  Tables
+                </header>
+
+                <div class="summary">
+                  <p>
+                    Tables are used to display data in a tabular format. They are created using a combination of pipes <code>|</code> , dashes <code>-</code> , and colons <code>:</code> .
+                  </p>
+                  <p>
+                    <u>Table Structure:</u>
+                  </p>
+                  <ul>
+                    <li>
+                      The first row is used to create headers.
+                    </li>
+                    <li>
+                      The second row is used to specify the alignment of the columns.
+                    </li>
+                    <li>
+                      The rest of the rows are used to create the table's body.
+                    </li>
+                  </ul>
+                  <p>
+                    <u>Alignment (second row):</u>
+                  </p>
+                  <ul>
+                    <li>
+                      The number of dashes in the second row determines the alignment of the columns.
+                    </li>
+                    <li>
+                      If there are dashes on the left, right, or both sides of the column, the column is left-aligned, right-aligned, or centered, respectively.
+                    </li>
+                  </ul>
+                  <p>
+                    <u>Table Body (rest of the rows):</u>
+                  </p>
+                  <ul>
+                    <li>
+                      The pipes are used to separate the columns.
+                    </li>
+                    <li>
+                      The pipes at the beginning and end of the row are optional.
+                    </li>
+                    <li>
+                      In the second row they are used to separate the alignment from the header text.
+                    </li>
+                    <li>
+                      In the rest of the rows they are used to separate the columns.
+                    </li>
+                    <li>
+                      The pipes at the beginning and end of the row are optional.
+                    </li>
+                  </ul>
+                </div>
+
+
+                <p class="example mt-4 mb-3">
+                  Example:
+                </p>
+
+                <div class="code-block markdown">
+                  <pre><code>
+| Column 1 | Column 2 | Column 3 |
+|----------|----------|----------|
+| Row 1    | Data     | Data     |
+| Row 2    | Data     | Data     | 
+  </code></pre>
+                </div>
+
+
+                <p class="converted mt-4 mb-3">
+                  Will be converted to:
+                </p>
+
+                <div class="code-block as-html">
+                  <pre><code>
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Column 1&lt;/th&gt;
+      &lt;th&gt;Column 2&lt;/th&gt;
+      &lt;th&gt;Column 3&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Row 1&lt;/td&gt;
+      &lt;td&gt;Data&lt;/td&gt;
+      &lt;td&gt;Data&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Row 2&lt;/td&gt;
+      &lt;td&gt;Data&lt;/td&gt;
+      &lt;td&gt;Data&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+  </code></pre>
+                </div>
+
+
+                <p class="displayed mt-4 mb-3">
+                  And displayed as:
+                </p>
+
+                <div class="code-block result bg-info-subtle">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Column 1</th>
+                        <th>Column 2</th>
+                        <th>Column 3</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Row 1</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                      </tr>
+                      <tr>
+                        <td>Row 2</td>
+                        <td>Data</td>
+                        <td>Data</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+              </section>
+
+
+              <hr>
+
+
+              <!--##### TASK LISTS #####-->
+              <section
+                id="Task_Lists"
+                class="main-section my-5"
+              >
+
+                <header class="task-lists section-title h2 mt-4 mb-4">
+                  <i class="bi bi-check2-square me-2"></i>
+                  Task Lists
+                </header>
+
+                <div class="summary">
+                  <p>
+                    Task lists are used to create a list of items that can be checked off, such as to-do lists.
+                  </p>
+                  <p>
+                    They are created using square brackets <code>[ ]</code> followed by a space. To check off an item, replace the space with an x <code>x</code> .
+                  </p>
+                </div>
+
+
+                <p class="example mt-4 mb-3">
+                  Example:
+                </p>
+
+                <div class="code-block markdown">
+                  <pre><code>
+- [x] Completed task
+- [ ] Incomplete task 
+  </code></pre>
+                </div>
+
+
+                <p class="converted mt-4 mb-3">
+                  Will be converted to:
+                </p>
+
+                <div class="code-block as-html">
+                  <pre><code>
+&lt;ul&gt;
+  &lt;li&gt;&lt;input type="checkbox" checked disabled&gt; Completed task&lt;/li&gt;
+  &lt;li&gt;&lt;input type="checkbox" disabled&gt; Incomplete task&lt;/li&gt;
+&lt;/ul&gt;
+  </code></pre>
+                </div>
+
+
+                <p class="displayed mt-4 mb-3">
+                  And displayed as:
+                </p>
+
+                <div class="code-block result bg-info-subtle">
+                  <ul>
+                    <li>
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        checked
+                        disabled
+                      >
+                      Completed task
+                    </li>
+                    <li><input
+                        class="form-check-input"
+                        type="checkbox"
+                        disabled
+                      >
+                      Incomplete task
+                    </li>
+                  </ul>
+                </div>
+
+              </section>
+
+
+              <hr>
+
+
+              <!--##### HORIZONTAL RULES #####-->
+              <section
+                id="Horizontal_Rules"
+                class="main-section my-5"
+              >
+
+                <header class="horizontal-rules section-title h2 mt-4 mb-4">
+                  <i class="bi bi-hr me-2"></i>
+                  Horizontal Rules
+                </header>
+
+                <div class="summary">
+                  <p>
+                    Horizontal rules are used to create a horizontal line to separate sections in a document.
+                  </p>
+                  <p>
+                    They are created using three or more asterisks <code>*</code> , dashes <code>-</code> , or underscores <code>_</code> on a line by themselves.
+                  </p>
+                </div>
+
+
+                <p class="example mt-4 mb-3">
+                  Example:
+                </p>
+
+                <div class="code-block markdown">
+                  <pre><code>
+---
+
+- - -
+
+***
+  </code></pre>
+                </div>
+
+
+                <p class="converted mt-4 mb-3">
+                  Will be converted to:
+                </p>
+
+                <div class="code-block as-html">
+                  <pre><code>
+&lt;hr&gt;
+
+&lt;hr&gt;
+                    
+&lt;hr&gt;
+  </code></pre>
+                </div>
+
+
+                <p class="displayed mt-4 mb-3">
+                  And displayed as:
+                </p>
+
+                <div class="code-block result bg-info-subtle">
+                  <hr>
+
+                  <hr>
+
+                  <hr>
+                </div>
+
+              </section>
+
+
+              <hr>
+
+
+              <!--##### CODE #####-->
+              <section
+                id="Code"
+                class="main-section my-5"
+              >
+
+                <header class="code section-title h2 my-4">
+                  <i class="bi bi-code-slash me-2"></i>
+                  Code
+                </header>
+
+
+                <!------- INLINE CODE ------->
+                <div class="code-inlinecode sub-title h4 mt-4 mb-4">
+                  <u>Inline Code</u>
+                </div>
+
+                <div class="summary">
+                  <p>
+                    Inline code is used to denote a snippet of code within a line of text. It is created using a backtick <code>`</code> on either side of the code.
+                  </p>
+                </div>
+
+                <p class="example mt-4 mb-3">
+                  Example:
+                </p>
+
+                <div class="code-block markdown">
+                  <pre><code>
+Here is a paragraph with some `html`.
+  </code></pre>
+                </div>
+
+
+                <p class="converted mt-4 mb-3">
+                  Will be converted to:
+                </p>
+
+                <div class="code-block as-html">
+                  <pre><code>
+&lt;p&gt;Here is a paragraph with some &lt;code&gt;html&lt;/code&gt;.&lt;/p&gt;
+  </code></pre>
+                </div>
+
+
+                <p class="displayed mt-4 mb-3">
+                  And displayed as:
+                </p>
+
+                <div class="code-block result bg-info-subtle">
+                  <p class="m-0">Here is a paragraph with some <code>html</code> .</p>
+                </div>
+
+
+                <!------- CODE BLOCK ------->
+                <div class="code-blockcode sub-title h4 mt-5 mb-4">
+                  <u>Code Blocks</u>
+                </div>
+
+                <div class="summary">
+                  <p>
+                    Code blocks are used to display blocks of code snippets. They are created using three backticks <code>```</code> on a line by themselves, followed by the code block, and ending with three backticks <code>```</code> on a line by themselves.
+                  </p>
+                  <p>
+                    There is also the option (where supported) to include syntax highlighting based on the programming language used. To do this, specify the language name after the first set of backticks: <code>```python</code> .
+                  </p>
+                </div>
+
+
+                <p class="example mt-4 mb-3">
+                  Example:
+                </p>
+
+                <div class="code-block markdown">
+                  <pre><code>
+```[optional language name]
+def hello_world():
+  print("Hello, world!")
+```
+  </code></pre>
+                </div>
+
+
+                <p class="converted mt-4 mb-3">
+                  Will be converted to:
+                </p>
+
+                <div class="code-block as-html">
+                  <pre><code>
+&lt;pre&gt;&lt;code&gt;
+def hello_world():
+  print("Hello, world!")
+&lt;/code&gt;&lt;/pre&gt;
+  </code></pre>
+                </div>
+
+
+                <p class="displayed mt-4 mb-3">
+                  And displayed as:
+                </p>
+
+                <div class="code-block result bg-info-subtle">
+                  <pre class="m-0 p-0"><code class="bg-info-subtle m-0 p-0">def hello_world():
+  print("Hello, world!")</code></pre>
+                </div>
+
+              </section>
+
+
+              <hr>
+
+
+              <!--##### ESCAPING CHARACTERS #####-->
+              <section
+                id="Escaping_Characters"
+                class="main-section my-5"
+              >
+
+                <header class="escaping-characters section-title h2 mt-4 mb-4">
+                  <i class="bi bi-ban me-2"></i>
+                  Escaping Characters
+                </header>
+
+                <div class="summary">
+                  <p>
+                    Markdown allows you to escape characters that would otherwise be used to format text in a document. To escape a character, add a backslash <code>\</code> before the character.
+                  </p>
+                </div>
+
+
+                <p class="example mt-4 mb-3">
+                  Example:
+                </p>
+
+                <div class="code-block markdown">
+                  <pre><code>
+\*This text is not in italics\*
+  </code></pre>
+                </div>
+
+
+                <p class="converted mt-4 mb-3">
+                  Will be converted to:
+                </p>
+
+                <div class="code-block as-html">
+                  <pre><code>
+&lt;p&gt;*This text is not in italics*&lt;/p&gt;
+  </code></pre>
+                </div>
+
+
+                <p class="displayed mt-4 mb-3">
+                  And displayed as:
+                </p>
+
+                <div class="code-block result bg-info-subtle">
+                  <p class="m-0">
+                    *This text is not in italics*
+                  </p>
+                </div>
+
+              </section>
+
+
+              <hr>
+
+
+              <!--##### MULTI-LINE TEXT #####-->
+              <section
+                id="Multi-line_Text"
+                class="main-section my-5"
+              >
+
+                <header class="multi-line-text section-title h2 mt-4 mb-4">
+                  <i class="bi bi-body-text me-2"></i>
+                  Multi-line Text
+                </header>
+
+                <div class="summary">
+                  <p>
+                    Multi-line text is used to create a block of text that preserves the line breaks and spaces.
+                  </p>
+                  <p>
+                    Multi-lines are created using two or more spaces at the end of a line, or text separated by one or more blank lines.
+                  </p>
+                </div>
+
+
+                <p class="example mt-4 mb-3">
+                  Example:
+                </p>
+
+                <div class="code-block markdown">
+                  <pre><code>
+This is the first line.
+
+This is another line with a blank line in between.
+  </code></pre>
+                </div>
+
+
+                <p class="converted mt-4 mb-3">
+                  Will be converted to:
+                </p>
+
+                <div class="code-block as-html">
+                  <pre><code>
+&lt;p&gt;This is the first line.&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;This is another line with a blank line in between.&lt;/p&gt;
+  </code></pre>
+                </div>
+
+
+                <p class="displayed mt-4 mb-3">
+                  And displayed as:
+                </p>
+
+                <div class="code-block result bg-info-subtle">
+                  <p class="m-0">This is the first line.</p>
+                  <br class="m-0">
+                  <p class="m-0">This is another line with a blank line in between.</p>
+                </div>
+
+              </section>
+
+
+              <hr>
+
+
+              <!--##### COMMENTS #####-->
+              <section
+                id="Comments"
+                class="main-section my-5"
+              >
+
+                <header class="comments section-title h2 mt-4 mb-4">
+                  <i class="bi bi-chat me-2"></i>
+                  Comments
+                </header>
+
+                <div class="summary">
+                  <p>
+                    Comments are used to add notes to a document that are not displayed in the rendered document.
+                  </p>
+                  <p>
+                    Markdown itself does not support comments, but they can be created using an HTML comment tag <code>&lt;!-- --&gt;</code> .
+                  </p>
+                </div>
+
+
+                <p class="example mt-4 mb-3">
+                  Example:
+                </p>
+
+                <div class="code-block markdown">
+                  <pre><code>
+&lt;!-- This is a comment in Markdown --&gt;
+  </code></pre>
+                </div>
+
+
+                <p class="converted mt-4 mb-3">
+                  Will be converted to:
+                </p>
+
+                <div class="code-block as-html">
+                  <pre><code class="text-body-tertiary">
+&lt;!-- This is a comment in Markdown --&gt;
+  </code></pre>
+                </div>
+
+              </section>
+
+
+              <hr>
+
+
+              <!--##### EMOJIS #####-->
+              <section
+                id="Emojis"
+                class="main-section my-5"
+              >
+
+                <header class="emojis section-title h2 mt-4 mb-4">
+                  <i class="bi bi-emoji-smile me-2"></i>
+                  Emojis
+                </header>
+
+                <div class="summary">
+                  <p>
+                    Emojis are used to add a touch of personality, visually communicate emotions or ideas, and enhance the reader's engagement with the text in a friendly and informal way. Plus, they're fun! 😋🎉
+                  </p>
+
+                  <p>
+                    Emojis can be inserted into Markdown documents using literal emoji characters. If you are using Windows you can access the emoji keyboard with the shortcut
+                    <code><i class="bi bi-microsoft"></i>
+                      + Period</code> . For Mac users, it's
+                    <code>Ctrl + <i class="bi bi-command"></i>
+                      + Space</code> .
+                    Or, you can copy and paste from a website like
+                    <a
+                      class="link-info"
+                      href="https://emojipedia.org/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >Emojipedia</a>.
+                  </p>
+
+                  <p>
+                    On some platforms you can use <i>colon-syntax</i> to insert emojis directly into text. This is achieved using a colon <code>:</code> followed by the emoji name and another colon <code>:</code> . A list of supported emojis can be found
+                    <a
+                      class="link-info"
+                      href="https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >here</a>
+                  </p>
+                </div>
+
+
+                <p class="example mt-4 mb-3">
+                  Example:
+                </p>
+
+                <div class="code-block markdown">
+                  <pre><code>
+😄 is the same as :smile:
+  </code></pre>
+                </div>
+
+              </section>
+
+
+
+            </section>
+
+
+            <hr>
+
+
+            <!--_____ RESOURCES SECTION _____-->
+            <section
+              id="Resources"
+              class="main-section mt-5 mb-5"
+            >
+              <header class="resources main-title display-6 my-4">
+                <i class="bi bi-bookmark-star"></i>
+                <span>Resources</span>
+              </header>
+
+              <p class="summary mb-4">
+                Here are some excellent Markdown resources to add to your bookmarks. Don't forget to star the repos on your GitHub!
+              </p>
+
+              <ul class="list-group mx-5">
+
+                <li class="list-group-item list-group-item-action">
+                  <i class="bi bi-bookmark-plus me-2"></i>
+                  <a
+                    class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                    href="https://daringfireball.net/projects/markdown/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Markdown by John Gruber
+                  </a>
+                </li>
+
+                <li class="list-group-item list-group-item-action">
+                  <i class="bi bi-bookmark-plus me-2"></i>
+                  <a
+                    class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                    href="https://github.com/darsaveli/Readme-Markdown-Syntax"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Readme-Markdown-Syntax by <i class="bi bi-github"></i> darsaveli
+                  </a>
+                </li>
+
+                <li class="list-group-item list-group-item-action">
+                  <i class="bi bi-bookmark-plus me-2"></i>
+                  <a
+                    class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                    href="https://github.com/lifeparticle/Markdown-Cheatsheet"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    The Ultimate Markdown Cheatsheet by <i class="bi bi-github"></i> lifeparticle
+                  </a>
+                </li>
+
+                <li class="list-group-item list-group-item-action">
+                  <i class="bi bi-bookmark-plus me-2"></i>
+                  <a
+                    class="link-info link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                    href="https://markdownlivepreview.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Markdown Live Preview by <i class="bi bi-github"></i> tanabe
+                  </a>
+                </li>
+
+              </ul>
+            </section>
+
+
+            <a
+              href="#"
+              class="link-info"
+            >
+              <i class="bi bi-chevron-double-up me-2"></i>Back to contents
+            </a>
+
+          </main>
+          <br>
+
+
+
+          <!--***** FOOTER *****-->
+          <footer class="d-flex justify-content-center align-items-end border-top pt-4 pb-2">
+            <p class='fs-6 mb-0'>
+              Coded by
+              <a
+                id="footer-link"
+                href="https://github.com/Nix7amcm"
+                target='_blank'
+              >Nix7amcm⚡</a>
+            </p>
+          </footer>
+
+
+        </div>
+
+
+      </div>
+    </div>
+
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+
+
+</html>
